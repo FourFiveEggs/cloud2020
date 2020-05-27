@@ -47,6 +47,7 @@
       <module>cloud-consumer-hystrix-dashboard9001</module>
       <module>cloud-gateway-gateway9527</module>
       <module>cloud-config-center-3344</module>
+      <module>cloud-config-center-3355</module>
   </modules>
 
   <!--子模块继承之后，提供作用：锁定版本+子module不用groupId和version-->
