@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 
 /**
  * Create By wl on 2020/4/15
+ * @author wl
  */
 @RestController
 @Slf4j
@@ -30,5 +31,20 @@ public class OrderController {
     @GetMapping(value = "/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
         return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
+    }
+
+    /**
+     *====================> zipkin+sleuth==============================
+     */
+    @GetMapping(value = "/consumer/payment/zipkin")
+    public String paymentZipkin(){
+
+        /**
+         * log
+         */
+        log.info("--------------------zipkin+sleuth--------------------------");
+
+        String result = restTemplate.getForObject(PAYMENT_URL+"/payment/zipkin/", String.class);
+        return result;
     }
 }

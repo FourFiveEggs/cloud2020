@@ -1,11 +1,5 @@
 server:
   port: 3344
-
-eureka:
-  client:
-    service-url:
-      defaultZone : http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #服务注册到eureka集群地址
-
 spring:
   application:
     name: cloud-config-center
@@ -13,7 +7,26 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/FourFiveEggs/springcloud-config.git #Github上git仓库名称
-          search-paths :
-            - springcloud-config #搜索目录
-          default-label: master #读取分支
+          uri:  https://github.com/FourFiveEggs/springcloud-config.git
+          search-paths:
+            - springcloud-config
+      label: master
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #服务注册到eureka集群地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+
