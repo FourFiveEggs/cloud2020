@@ -12,3 +12,4 @@ spring:
         server-addr: localhost:8848 #配置中心地址
         file-extension: yaml #指定yaml格式的配置
         group: TEST_GROUP
+        namespace: 01b6c024-32dd-40e8-8148-7fa1c4651114
