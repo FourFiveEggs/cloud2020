@@ -7,25 +7,20 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 /**
- * Create By wl on 2020/6/8
  * @author wl
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Account {
+
     private Long id;
 
     private Long userId;
 
-    private Long productId;
+    private BigDecimal total;
 
-    private Integer count;
+    private BigDecimal used;
 
-    private BigDecimal money;
-
-    /**
-     * 订单状态：0：创建中；1：已完结
-     */
-    private Integer status;
+    private BigDecimal  residue;
 }
