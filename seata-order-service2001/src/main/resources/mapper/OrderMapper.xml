@@ -13,7 +13,8 @@
     </resultMap>
 
     <insert id="create" parameterType="com.atguigu.springcloud.alibaba.domain.Order" useGeneratedKeys="true" keyProperty="id">
-        insert into t_order(user_id,product_id,count,money,status) values (#{userId},#{productId},#{count},#{money},0);
+        insert into t_order(id,user_id,product_id,count,money,status) values
+        (null,#{userId},#{productId},#{count},#{money},0);
     </insert>
 
     <update id="update">

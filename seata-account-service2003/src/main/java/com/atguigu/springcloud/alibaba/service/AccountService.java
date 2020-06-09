@@ -1,5 +1,7 @@
 package com.atguigu.springcloud.alibaba.service;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.math.BigDecimal;
 
 /**
@@ -7,5 +9,5 @@ import java.math.BigDecimal;
  */
 public interface AccountService {
 
-    void decrease(Long userId, BigDecimal money);
+    void decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }

@@ -22,5 +22,5 @@ public class Account {
 
     private BigDecimal used;
 
-    private BigDecimal  residue;
+    private BigDecimal residue;
 }

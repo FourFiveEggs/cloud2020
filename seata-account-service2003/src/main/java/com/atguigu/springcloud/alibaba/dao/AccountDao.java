@@ -1,9 +1,13 @@
 package com.atguigu.springcloud.alibaba.dao;
 
-import feign.Param;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 import java.math.BigDecimal;
 
+/**
+ * @author wl
+ */
 @Mapper
 public interface AccountDao {
 
