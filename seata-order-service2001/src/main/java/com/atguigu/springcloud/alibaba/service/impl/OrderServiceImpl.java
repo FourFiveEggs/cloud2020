@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 /**
  * Create By wl on 2020/6/8
  * @author wl
+ * 过程： 创建订单 -> 调用库存服务扣减库存 -> 调用账户服务扣减账户余额 -> 修改订单状态
  */
 @Slf4j
 @Service
@@ -47,8 +48,9 @@ public class OrderServiceImpl implements OrderService {
         log.info("----->订单微服务开始调用账户,做扣减End");
 
         // 4 修改订单状态,从0到1,1代表已完成
-        log.info("--------修改订单状态开始---------");
+        log.info("--------修改订单状态-START---------");
         orderDao.update(order.getUserId(), 0);
+        log.info("--------修改订单状态-END---------");
 
         log.info("------------------结束订单------------------------");
 

@@ -15,10 +15,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     # mysql驱动类
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://10.211.55.5:3306/seata_storage?useUnicode=true&characterEncoding-utr-8&useSSL=false
     username: root
     password: root
-
 
 feign:
   hystrix:
@@ -29,6 +28,6 @@ logging:
       seata: info
 
 mybatis:
-  mapperLocations: classpath*:mapper/*.xml
+  mapperLocations: classpath:mapper/*.xml
 
 

@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public class AccountController {
 
     @Resource
-    AccountService accountService;
+    private AccountService accountService;
 
     @RequestMapping("/account/decrease")
     public CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money) {
