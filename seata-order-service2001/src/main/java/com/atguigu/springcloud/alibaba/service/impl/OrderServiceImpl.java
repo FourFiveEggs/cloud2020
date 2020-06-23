@@ -49,7 +49,7 @@ public class OrderServiceImpl implements OrderService {
         //3.扣减账户
         log.info("----->订单微服务开始调用账户,做扣减Money");
         accountService.decrease(order.getUserId(), order.getMoney());
-        log.info("----->订单微服务开始调用账户,做扣减End");
+        log.info("----->订单微服务开始调用账户,做扣   减End");
 
         // 4 修改订单状态,从0到1,1代表已完成
         log.info("--------修改订单状态-START---------");
